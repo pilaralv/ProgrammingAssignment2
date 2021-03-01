@@ -1,13 +1,14 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The functions below will calculate the inverse of a matrix,
+## add it to the cache, and return cached value if matrix inverse
+## already computed. 
 
-## Write a short comment describing this function
+## Making the matrix and setting inverse
 
 makeCacheMatrix <- function(x=matrix()){
         inv <- NULL
         set <- function(y){
                 x <<- y
-                m <<- NULL
+                inv <<- NULL
         }
         get <- function () x
         setinverse <- function(inverse) inv <<- inverse
@@ -18,7 +19,7 @@ makeCacheMatrix <- function(x=matrix()){
 } 
 
 
-## Write a short comment describing this function
+## Getting the inverse through solve function or cache
 
 cacheSolve <- function(x,...){
         inv <- x$getinverse()
